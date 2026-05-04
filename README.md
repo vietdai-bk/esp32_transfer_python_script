@@ -20,4 +20,7 @@ python send_one_image.py /path/to/image.png
 ```
 python main.py
 ```
-Kết quả lưu tại ```results.csv```, các đội thi nộp lại file này về cho BTC tại ngày chung kết để tính điểm.
+Kết quả lưu tại ```results.csv```, các đội thi nộp lại file này về cho BTC tại ngày chung kết để tính điểm.  
+### Lưu ý
+Đầu vào của mô hình được deploy trên ESP32 ở định dạng uint8, nên các đội khi train nên tránh chuẩn hóa (x - mean) / std.  
+Sau vòng loại BTC sẽ cung cấp đáp án của vòng loại, các đội thi nên test thử với tập test và so sánh kết quả file xuất ra với kết quả chính thức để đảm bảo mô hình hoạt động đúng. (Mô hình dự đoán sai có thể do cả cách chuẩn hóa dữ liệu đầu vào...)
