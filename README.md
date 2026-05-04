@@ -11,7 +11,13 @@ pip install requests opencv-python
 ```
 ESP32_IP = "192.168.1.6"
 ```
-4. Chạy lệnh
+4. Chạy test với một ảnh
 ```
 python send_one_image.py /path/to/image.png
 ```
+5. Chạy với một folder ảnh (thực tế tại Vòng Chung Kết)  
+***Cập nhật lại đường dẫn tới folder, ip của esp32***, thực hiện chạy lệnh sau:
+```
+python main.py
+```
+Kết quả lưu tại ```results.csv```, các đội thi nộp lại file này về cho BTC tại ngày chung kết để tính điểm.
